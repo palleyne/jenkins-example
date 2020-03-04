@@ -24,7 +24,7 @@ pipeline {
         stage ('Deployment Stage') {
             steps {
                 withMaven(maven : 'maven_3.6.3') {
-                    sh 'mvn -s /home/palleyne/.m2/settings.xml deploy'
+                    sh 'mvn -s /var/lib/jenkins/.m2/settings.xml deploy'
                 }
             }
         }
